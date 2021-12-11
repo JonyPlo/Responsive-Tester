@@ -1,0 +1,278 @@
+/* General styles */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.resBody {
+    font-family: 'Roboto',
+        sans-serif;
+    background: #ffffff;
+    font-size: 16px;
+    background: #0a2e36;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-bar {
+    /* Bar Styles */
+    padding-top: 24px;
+    text-align: center;
+}
+
+.resButton {
+    border: 0;
+    margin-right: 32px;
+    font-size: 3em;
+    color: #919191;
+    outline: none;
+    transition: 0.3s ease color;
+    background: transparent;
+}
+
+.resButton:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.resButton:nth-child(5) {
+    transform: rotate(90deg);
+}
+
+.resButton:nth-child(7) {
+    transform: rotate(90deg);
+}
+
+.active {
+    color: #fff;
+}
+
+.wrapper {
+    /* Responsive View Styles */
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.responsiveView {
+    display: none;
+    width: 2576px;
+    max-width: 100%;
+    min-height: 1080px;
+    border: 0;
+    margin: 0 auto;
+    transition: .8s ease all ;
+    /* transition: 1s ease height; */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container-form {
+    margin: 20px 0;
+    width: 40vw;
+    color: #919191;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Input */
+
+.form {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+.form input {
+    width: 100%;
+    height: 100%;
+    padding-top: 7px;
+    border: none;
+    background: #0a2e36;
+    color: #fff;
+    outline: 0;
+    font-size: 16px;
+}
+
+.form label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #919191;
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #17828a;
+    transform: translateX(-100%);
+    transition: all .3s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    transition: all .3s ease;
+}
+
+.form input:focus+.label-name .content-name,
+.form input:valid+.label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 12px;
+    color: #17828a;
+}
+
+.form input:focus+.label-name::after,
+.form input:valid {
+    transform: translateX(0%);
+
+}
+
+/* Button search */
+.btnSearch {
+    font-family: sans-serif;
+    color: #fff;
+    padding: 10px 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 0 10px;
+    transition: 0.15s ease-in-out all;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to right, #17828a 50%, #16777e 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.btnSearch:hover {
+    cursor: pointer;
+    background-position: left bottom;
+}
+
+.btnSearch:active {
+    background-position: left bottom;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btnSearch:disabled {
+    background: #afafaf;
+    box-shadow: none;
+}
+
+/* Alert */
+
+.swal2-styled.swal2-confirm {
+    background-color: #17828a !important;
+}
+
+.swal2-styled:focus {
+    outline: 0;
+    box-shadow: 0 0 0 1px #fff,
+        0 0 0 3px #20a9b375;
+}
+
+/* Not Found */
+
+body {
+    background-color: #2F3242;
+}
+
+svg {
+    position: absolute;
+    right: 52%;
+}
+
+.message-box {
+    height: 200px;
+    width: 380px;
+    position: relative;
+    top: 10em;
+    left: 52%;
+    color: #FFF;
+    font-family: Roboto;
+    font-weight: 300;
+}
+
+.message-box h1 {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 40px;
+}
+
+#Polygon-1,
+#Polygon-2,
+#Polygon-3,
+#Polygon-4,
+#Polygon-4,
+#Polygon-5 {
+    animation: float 1s infinite ease-in-out alternate;
+}
+
+#Polygon-2 {
+    animation-delay: .2s;
+}
+
+#Polygon-3 {
+    animation-delay: .4s;
+}
+
+#Polygon-4 {
+    animation-delay: .6s;
+}
+
+#Polygon-5 {
+    animation-delay: .8s;
+}
+
+@keyframes float {
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 450px) {
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px;
+        margin-left: -190px;
+    }
+
+    .message-box {
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -190px;
+        text-align: center;
+    }
+}
+
+.svg {
+    display: block;
+    margin-top: 5em;
+}
+
+.class-2k{
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
